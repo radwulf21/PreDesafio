@@ -1,9 +1,18 @@
 package predesafio1
 
 class Sistema() {
+    val livros = mutableListOf<Livro>()
+    val colecoes = mutableListOf<Colecao>()
+  
+      fun cadastrar(livro: Livro) {
+        livros.add(livro)
+    }
 
-<<<<<<< HEAD
-    
+    fun cadastrar(colecao: Colecao) {
+        colecoes.add(colecao)
+    }
+  
+  
     fun consultar(livro: Livro){
 
         if (livro in livros){
@@ -27,6 +36,7 @@ class Sistema() {
 
     }
 
+  
     fun efetuarVenda(colecao:Colecao){
         colecoes.forEach {
             if (it.codigo == colecao.codigo) {
@@ -36,12 +46,22 @@ class Sistema() {
 
                 } else {
                     println("Estoque esgotado.")
+
+    fun efetuarVenda(livro: Livro) {
+        livros.forEach {
+            if (it.codigo == livro.codigo) {
+                if (it.qtdEstoque > 0) {
+                    it.qtdEstoque--
+                    println("Livro Vendido!")
+                } else {
+                    println("Estoque Esgotado!")
+
                 }
             }
         }
     }
 
+
 }
-=======
-}
->>>>>>> 2201c4ee7d994286bf842b568ce6bb4f3db24222
+
+              
