@@ -4,19 +4,19 @@ class Sistema {
     private val livros = mutableListOf<Livro>()
     private val colecoes = mutableListOf<Colecao>()
   
-    fun cadastrar(livro: Livro) {
-        livros.add(livro)
+    fun cadastrar(vararg livro: Livro) {
+        livros.addAll(livro)
     }
 
-    fun cadastrar(colecao: Colecao) {
-        colecoes.add(colecao)
+    fun cadastrar(vararg colecao: Colecao) {
+        colecoes.addAll(colecao)
     }
   
   
     fun consultar(livro: Livro){
 
         if (livro in livros) {
-            println("Livro ${livro.titulo}, escrito por ${livro.autor}, lançado em ${livro.anoLancamento} com o valor R$${livro.preco}")
+            println("Livro ${livro.titulo}, escrito por ${livro.autor}, lançado em ${livro.anoLancamento} com o valor R$ ${livro.preco}")
         } else {
             println("Livro não encontrado")
         }
@@ -25,7 +25,7 @@ class Sistema {
 
     fun consultar(colecao:Colecao){
         if (colecao in colecoes){
-            println("Coleção ${colecao.descricao} com o valor R$${colecao.preco}")
+            println("Coleção ${colecao.descricao} com o valor R$ ${colecao.preco}")
         } else {
             println("Livro não encontrado")
         }
@@ -39,7 +39,7 @@ class Sistema {
                     colecao.qtdEstoque--
                     println("A coleção ${colecao.descricao} foi vendida.")
                 } else {
-                    println("Estoque esgotado.")
+                    println("Estoque esgotado!")
                 }
             }
         }

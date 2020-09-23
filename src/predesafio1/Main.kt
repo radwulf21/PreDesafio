@@ -1,41 +1,36 @@
 package predesafio1
 
-
 fun main(){
 
-    val livro1 = Livro(111, "Livro Um", "Autor A", 2019, 1, 11.0)
-    val livro2 = Livro(222, "Livro Dois", "Autor A", 2020, 2,)
-    val livro3 = Livro(333, "Livro Três", "Autor B", 2000, 3)
-    val livro4 = Livro(444, "Livro Quatro", "Autor B", 2010,4)
-    val livro5 = Livro(555, "Livro Cinco", "Autor C", 2000, 5)
-    val livro6 = Livro(666, "Livro Seis", "Autor C", 2015, 6)
-    val livro7 = Livro(777, "Livro Sete", "Autor D", 2008, 7)
-    val livro8 =Livro(888, "Livro Oito", "Autor D", 2018, 8)
+    // Livros para testes
+    val livro1 = Livro(111, "Dom Casmurro", "Machado de Assis", 1899, 0, 11.0)
+    val livro2 = Livro(222, "O Alienista", "Machado de Assis", 1882, 2, 12.0)
+    val livro3 = Livro(333, "Iracema", "José de Alencar", 1865, 3, 15.0)
+    val livro4 = Livro(444, "A Hora da Estrela", "Clarice Lispector", 1977,4, 9.0)
+    val livro5 = Livro(555, "O Mulato", "Aluísio Azevedo", 1881, 5, 5.0)
+    val livro6 = Livro(666, "O Cortiço", "Aluísio Azevedo", 1890, 6, 6.0)
+    val livro7 = Livro(777, "Água Viva", "Clarice Lispector", 1973, 7, 10.0)
+    val livro8 = Livro(888, "Laços de Família", "Clarice Lispector", 1960, 8, 6.0)
 
+    // Coleções de livros para testes
+    val colecaoA = listOf(livro5, livro6)
+    val colecaoB = listOf(livro7, livro8)
 
-    val listaA = listOf(livro1, livro2)
-    val listaB =  listOf(livro3, livro4)
-    val listaC =  listOf(livro5)
-    val listaD =  listOf(livro7)
-    val listaC1 = listOf(livro6)
-    val listaD1 = listOf(livro8)
+    val colecao1 = Colecao(11, 11.0, "Mix de Aluísio de Azevedo", colecaoA, 1)
+    val colecao2 = Colecao(22, 16.0, "Mix de Clarice Lispector", colecaoB, 1)
 
+    // Cadastrar livros e coleções
+    val sistema = Sistema()
 
-    val colecaoA = Colecao(11, 50.99, "Livros do Autor A",listaA)
-    val colecaoB = Colecao(22, 100.00, "Livros do Autor B",listaB)
-    val colecaoC = Colecao(33, 80.99, "Livros do Autor C",listaC)
-    val colecaoD = Colecao(44, 70.00, "Livros do Autor D",listaD)
+    sistema.cadastrar(livro1, livro2, livro3, livro4)
 
-    //cadastro livros nas coleções
-    colecaoC.cadastrar(listaC1)
-    colecaoD.cadastrar(listaD1)
+    sistema.cadastrar(colecao1, colecao2)
 
+    // Consultar livros e coleções
+    sistema.consultar(livro1)
+    sistema.consultar(colecao1)
 
-    //consultar coleção
-    colecaoA.consultar(colecaoA.codigo)
-
-    //vender coleção
-    colecaoB.efetuarVenda(colecaoB.codigo)
+    // Vender livros e coleções
+    sistema.efetuarVenda(livro1)
+    sistema.efetuarVenda(colecao1)
 }
-
-

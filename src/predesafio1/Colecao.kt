@@ -1,5 +1,3 @@
 package predesafio1
 
-data class Colecao(override var codigo:Int, override var preco: Double, var descricao: String, var colecao: List<Livro>, override var qtdEstoque: Int):Item{
-
-}
+data class Colecao(override var codigo:Int, override var preco: Double, var descricao: String, var colecao: List<Livro>, override var qtdEstoque: Int) : Item
