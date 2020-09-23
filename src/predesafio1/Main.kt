@@ -1,5 +1,6 @@
 package predesafio1
 
+
 fun main(){
 
     val livro1 = Livro(111, "Livro Um", "Autor A", 2019, 1, 11.0)
@@ -36,3 +37,5 @@ fun main(){
     //vender coleção
     colecaoB.efetuarVenda(colecaoB.codigo)
 }
+
+
