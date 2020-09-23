@@ -2,6 +2,7 @@ package predesafio1
 
 class Sistema() {
 
+<<<<<<< HEAD
     
     fun consultar(livro: Livro){
 
@@ -41,3 +42,6 @@ class Sistema() {
     }
 
 }
+=======
+}
+>>>>>>> 2201c4ee7d994286bf842b568ce6bb4f3db24222
