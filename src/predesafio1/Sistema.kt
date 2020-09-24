@@ -6,10 +6,12 @@ class Sistema {
   
     fun cadastrar(vararg livro: Livro) {
         livros.addAll(livro)
+        println("Cadastrado com sucesso!")
     }
 
     fun cadastrar(vararg colecao: Colecao) {
         colecoes.addAll(colecao)
+        println("Cadastrado com sucesso!")
     }
   
   
